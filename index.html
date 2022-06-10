@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 2 website design</title>
+
+    <!-- css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/mca.jpg" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#sign-in">sign-in</a>
+            <a href="#appointment">appointment</a>
+            <a href="#contact">contact us</a>
+            <a href="#about">about</a>
+
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Medical check up appointment</h3>
+            <p><b>Better Care and Better Understanding</b></p>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="sign-in" id="sign-in">
+
+        <h1 class="heading"> <span>sign-</span>in</h1>
+
+        <div class="rowsignin">
+            <div class="imagesignin">
+                <img src="images/sign-up pic.jpeg" alt="">
+
+            </div>
+
+            <body class="sign-in body">
+                <div class="wrapper">
+                    <div class="title-text">
+                    </div>
+                    <div class="form-container">
+                        <div class="slide-controls">
+                            <input type="radio" name="slide" id="login" checked>
+                            <input type="radio" name="slide" id="signup">
+                            <label for="login" class="slide login">Login</label>
+                            <label for="signup" class="slide signup">Signup</label>
+                            <div class="slider-tab"></div>
+                        </div>
+                        <div class="form-inner">
+                            <form action="#appointment" class="login">
+                                <div class="field">
+                                    <input type="text" placeholder="username" required>
+                                </div>
+                                <div class="field">
+                                    <input type="password" placeholder="password" required>
+                                </div>
+                                <div class="pass-link">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                                <div class="field btn">
+                                    <div class="btn-layer"></div>
+                                    <input type="submit" value="Login">
+                                </div>
+                                <div class="signup-link">
+                                    Not a member? <a href="">Signup now</a>
+                                </div>
+                            </form>
+                            <form action="#appointment" class="signup">
+                                <div class="field">
+                                    <input type="text" placeholder="First name" required>
+                                </div>
+                                <div class="field">
+                                    <input type="text" placeholder="Last name" required>
+                                </div>
+                                <div class="field">
+                                    <input type="text" placeholder="Username" required>
+                                </div>
+                                <div class="field">
+                                    <input type="password" placeholder="Password" required>
+                                </div>
+                                <div class="field">
+                                    <input type="password" placeholder="Confirm password" required>
+                                </div>
+                                <div class="field btn">
+                                    <div class="btn-layer"></div>
+                                    <input type="submit" value="Signup">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loginText = document.querySelector(".title-text .login");
+                    const loginForm = document.querySelector("form.login");
+                    const loginBtn = document.querySelector("label.login");
+                    const signupBtn = document.querySelector("label.signup");
+                    const signupLink = document.querySelector("form .signup-link a");
+                    signupBtn.onclick = (() => {
+                        loginForm.style.marginLeft = "-50%";
+                        loginText.style.marginLeft = "-50%";
+                    });
+                    loginBtn.onclick = (() => {
+                        loginForm.style.marginLeft = "0%";
+                        loginText.style.marginLeft = "0%";
+                    });
+                    signupLink.onclick = (() => {
+                        signupBtn.click();
+                        return false;
+                    });
+                </script>
+            </body>
+        </div>
+    </section>
+
+    <section class="appointment" id="appointment">
+
+        <h1 class="heading"> <span>appointment</span> Form</h1>
+
+        <body class="appointmentbody">
+            <div class="appointmentwrapper">
+
+                <div class="appointmentform-container">
+
+                    <div class="appointmentform-inner">
+                        <form action="#" class="appointmentfrm">
+                            <div class="form1">
+                                <div class="fieldapp">
+                                    <label for="Full name">Full name</label>
+                                    <input type="text" id="Full name" required>
+                                </div>
+                                <div class="fieldapp">
+                                    <label for="pnumber">Phone number</label>
+                                    <input type="tel" id="pnumber" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                                        placeholder="0912-345-6789" required>
+
+                                </div>
+                                <div class="fieldapp">
+                                    <p>Gender</p>
+                                    <select id="gender" name="gender">
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                    </select>
+                                </div>
+                                <div class="fieldapp">
+                                    <label for="birthday">Date of Birth</label>
+                                    <input type="date" id="birthday" required>
+                                </div>
+
+                            </div>
+                            <div class="form2">
+                                <div class="fieldapp">
+                                    <label for="Email Address">Email Address</label>
+                                    <input type="email" id="Email Address" required>
+                                </div>
+                                <div class="fieldapp">
+                                    <label for="Address">Address</label>
+                                    <input type="text" id="Address" required>
+                                </div>
+                                <div class="fieldapp">
+                                    <label for="forappointment">Appointment</label>
+                                    <input type="datetime-local" id="forappointment" required>
+                                </div>
+                                <div class="appbtn">
+                                    <div class="field btn">
+                                        <div class="btn-layer"></div>
+                                        <input type="submit" value="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const submitBtn = document.querySelector("label.appointment");
+                const submitLink = document.querySelector("form .submit-link a");
+                loginBtn.onclick = (() => {
+                    loginForm.style.marginLeft = "0%";
+                    loginText.style.marginLeft = "0%";
+                });
+            </script>
+        </body>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact</span> us </h1>
+
+        <div class="rowcntc">
+
+            <div class="imagecntc">
+                <img src="images/best-contact-us-pages.png" alt="">
+
+            </div>
+
+            <div class="contentcntc">
+                <h1>Email us with any questions or inquiries or call 123-456-7890. We would be happy to answer your
+                    questions and set up a meeting with you. Medical Check-up Appointment can help set you apart</h1>
+                <div class="messagebox">
+                    <form action="#">
+                        <textarea class="textmessage" name="message"  rows="10" cols="48" placeholder="Write something ............" required ></textarea>
+                        <br><br>
+                        <div class="cntcbtn">
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="content">
+                <h3>what makes our service special?</h3>
+                <p>We have a lot of service that we can offer to you 
+                </p>
+                <p>Your health is our priorirty</p>
+            </div>
+
+            <div class="image">
+                <img src="images/about-pic.jpg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="links">
+            <a href="#">home</a>
+            <a href="#sign-in">sign-in</a>
+            <a href="#appointment">appointment</a>
+            <a href="#contact">contact us</a>
+            <a href="#about">about</a>
+
+        </div>
+
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
